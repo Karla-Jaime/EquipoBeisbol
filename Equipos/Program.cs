@@ -17,6 +17,8 @@ namespace Equipos
             equipo1.CiudadDeOrigen = "New York";
             equipo1.Entrenador = "Bugs Bunny";
 
+            equipo1.estadio = new Estadio("Tomas Oroz", "Guerrero #542", 120);
+
             equipo1.jugadores.Add(new Jugador("Michael Jordan ", "45"));
             equipo1.jugadores.Add(new Jugador("Babe Ruth ", "3"));
             equipo1.jugadores.Add(new Jugador("Tomas J.", "35"));
@@ -34,6 +36,7 @@ namespace Equipos
             equipo2.Nombre = "Dodgers";
             equipo2.CiudadDeOrigen = "Los Angeles";
             equipo2.Entrenador = "Dave Roberts";
+           
 
             equipo2.jugadores.Add(new Jugador("Enrique J. ", "14"));
             equipo2.jugadores.Add(new Jugador("Justin Turner ", "10"));
@@ -55,6 +58,19 @@ namespace Equipos
                 Console.WriteLine("Equipo: " + team.Nombre);
                 Console.WriteLine("Ciudad: " + team.CiudadDeOrigen);
                 Console.WriteLine("Entrenador: " + team.Entrenador);
+                if (team.estadio != null )
+                {
+                   
+                        Console.WriteLine("Nombre estadio: " + team.estadio.Nombre);
+                        Console.WriteLine("Direccion: " + team.estadio.Direccion);
+                        Console.WriteLine("Capacidad: " + team.estadio.Capacidad);
+                        Console.WriteLine("\n");
+                    
+                }
+                else
+                {
+                    Console.WriteLine("No tiene estadio");
+                }
                 foreach (Jugador jugadores in team.jugadores)
                 {
                     Console.WriteLine("Jugador: " + jugadores.Nombre);

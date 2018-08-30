@@ -14,6 +14,7 @@ namespace Equipos
         public string Jugadores { get; set; }
 
         public List<Jugador> jugadores {get; set;}
+        public Estadio estadio { get; set; }
         public Equipo()
         {
             jugadores = new List<Jugador>();
